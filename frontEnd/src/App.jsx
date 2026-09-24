@@ -1,13 +1,14 @@
-import { useState } from 'react'
+import { useState } from 'react';
 import './styles.module.css'
 import { Outlet } from "react-router-dom"
 import { createContext } from "react";
 import styles from "./styles.module.css";
+import Header from "./components/Header.jsx";
 
 
-export const AppContext = createContext({
-    ;
-})
+// export const AppContext = createContext({
+//     ;
+// })
 
 function App() {
   
@@ -15,9 +16,8 @@ function App() {
 
   return (
     <>
-      <AppContext>
-        <Nav className={styles.nav}/>
-      </AppContext>
+        <Header className={styles.header}/>
+        <Outlet />
     </>
   )
 }

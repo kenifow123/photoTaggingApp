@@ -7,37 +7,35 @@ datasource db {
   provider = "postgresql"
 }
 
-model Image {
-    id          Int     @id @default(autoincrement())
-    name        String
-    characters  Location[]
-    score       Score[]
-} 
-
 model Character {
-    id          Int     @id @default(autoincrement())
-    name        String
-    location    Location[]
+  id       Int        @id @default(autoincrement())
+  name     String
+  Location Location[]
+}
+
+model Image {
+  id       Int        @id @default(autoincrement())
+  name     String
+  Location Location[]
+  Score    Score[]
 }
 
 model Location {
-    id          Int         @id @default(autoincrement())
-    charId      Int
-    imageId     Int
-    latitude    Float
-    longitude   Float
-
-    image       Image       @relation(fields: [imageId], references: [id])
-    character   Character   @relation(fields: [charId], references: [id])
+  id        Int       @id @default(autoincrement())
+  charId    Int
+  imageId   Int
+  latitude  Float
+  longitude Float
+  Character Character @relation(fields: [charId], references: [id])
+  Image     Image     @relation(fields: [imageId], references: [id])
 }
 
 model Score {
-    id          Int         @id @default(autoincrement())
-    time        Float
-    name        String
-    startedAt   DateTime    @default(now())
-    completedAt DateTime?
-    imageId     Int
-
-    image       Image       @relation(fields: [imageId], references: [id])
+  id          Int       @id @default(autoincrement())
+  time        Float
+  name        String
+  startedAt   DateTime  @default(now())
+  completedAt DateTime?
+  imageId     Int
+  Image       Image     @relation(fields: [imageId], references: [id])
 }

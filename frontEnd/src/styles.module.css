@@ -1,0 +1,45 @@
+.header {
+    text-align: center;
+    border: black solid 1px;
+}
+
+.cardLink {
+    border: black solid 1px;
+    max-width: 400px;
+    max-height: 300px;
+
+}
+
+.cardLink img {
+    height: 100%;
+    width: 100%;
+}
+
+.levelDiv {
+    display: flex;
+    gap: 20px;
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: white;
+    border: 1px solid black;
+    padding: 0;
+}
+
+ {
+    margin: 0;
+    padding: 0;
+}
+
+.buttonDiv button {
+    border: none;
+    background: transparent;
+    padding: 10px;
+}
+
+.buttonDiv button:hover {
+    background: lightgray;
+}
