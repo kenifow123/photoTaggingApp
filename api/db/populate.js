@@ -3,31 +3,58 @@ import { prisma } from "../lib/prisma.js";
 async function main() {
     // Create a new user with a post
 
-    // const odlaw1 = await prisma.location.create({
-    //     data: {
-    //         charId : 3,
-    //         imageId : 1,
-    //         latitude : 250,
-    //         longitude : 390,
-    //     },
-    //     include: {
-    //         Character: true,
-    //         Image: true
-    //     },
-    // });
-    //
-    // const wizard = await prisma.location.create({
-    //     data: {
-    //         charId : 2,
-    //         imageId : 1,
-    //         latitude : 641,
-    //         longitude : 390,
-    //     },
-    //     include: {
-    //         Character: true,
-    //         Image: true
-    //     },
-    // });
+    const waldo = await prisma.location.create({
+        data: {
+            charId : 1,
+            imageId : 2,
+            latitude : 250,
+            longitude : 390,
+        },
+        include: {
+            Character: true,
+            Image: true
+        },
+    });
+
+    const odlaw1 = await prisma.location.create({
+        data: {
+            charId : 3,
+            imageId : 2,
+            latitude : 250,
+            longitude : 390,
+        },
+        include: {
+            Character: true,
+            Image: true
+        },
+    });
+
+    const wizard = await prisma.location.create({
+        data: {
+            charId : 2,
+            imageId : 2,
+            latitude : 641,
+            longitude : 390,
+        },
+        include: {
+            Character: true,
+            Image: true
+        },
+    });
+
+
+    const wenda = await prisma.location.create({
+        data: {
+            charId : 4,
+            imageId : 2,
+            latitude : 250,
+            longitude : 390,
+        },
+        include: {
+            Character: true,
+            Image: true
+        },
+    });
 
 
 
