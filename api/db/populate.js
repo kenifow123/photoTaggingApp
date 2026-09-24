@@ -6,9 +6,9 @@ async function main() {
     const waldo = await prisma.location.create({
         data: {
             charId : 1,
-            imageId : 2,
-            latitude : 250,
-            longitude : 390,
+            imageId : 3,
+            latitude : 754,
+            longitude : 206,
         },
         include: {
             Character: true,
@@ -16,12 +16,12 @@ async function main() {
         },
     });
 
-    const odlaw1 = await prisma.location.create({
+    const odlaw = await prisma.location.create({
         data: {
             charId : 3,
-            imageId : 2,
-            latitude : 250,
-            longitude : 390,
+            imageId : 3,
+            latitude : 400,
+            longitude : 1126,
         },
         include: {
             Character: true,
@@ -32,9 +32,9 @@ async function main() {
     const wizard = await prisma.location.create({
         data: {
             charId : 2,
-            imageId : 2,
-            latitude : 641,
-            longitude : 390,
+            imageId : 3,
+            latitude : 941,
+            longitude : 1513,
         },
         include: {
             Character: true,
@@ -46,9 +46,9 @@ async function main() {
     const wenda = await prisma.location.create({
         data: {
             charId : 4,
-            imageId : 2,
-            latitude : 250,
-            longitude : 390,
+            imageId : 3,
+            latitude : 375,
+            longitude : 1661,
         },
         include: {
             Character: true,
@@ -57,7 +57,11 @@ async function main() {
     });
 
 
+    //img 1
+    //x +- 20
+    //y +- 30
 
+    //img 2
     //x +- 20
     //y +- 30
 
