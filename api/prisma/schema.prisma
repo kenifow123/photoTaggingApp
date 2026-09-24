@@ -7,18 +7,35 @@ datasource db {
   provider = "postgresql"
 }
 
-model User { 
-  id    Int     @id @default(autoincrement()) 
-  email String  @unique
-  name  String?
-  posts Post[]
-} 
+model Character {
+  id       Int        @id @default(autoincrement())
+  name     String
+  Location Location[]
+}
 
-model Post { 
-  id        Int     @id @default(autoincrement()) 
-  title     String
-  content   String?
-  published Boolean @default(false) 
-  author    User    @relation(fields: [authorId], references: [id]) 
-  authorId  Int
-} 
+model Image {
+  id       Int        @id @default(autoincrement())
+  name     String
+  Location Location[]
+  Score    Score[]
+}
+
+model Location {
+  id        Int       @id @default(autoincrement())
+  charId    Int
+  imageId   Int
+  latitude  Float
+  longitude Float
+  Character Character @relation(fields: [charId], references: [id])
+  Image     Image     @relation(fields: [imageId], references: [id])
+}
+
+model Score {
+  id          Int       @id @default(autoincrement())
+  time        Float
+  name        String
+  startedAt   DateTime  @default(now())
+  completedAt DateTime?
+  imageId     Int
+  Image       Image     @relation(fields: [imageId], references: [id])
+}
