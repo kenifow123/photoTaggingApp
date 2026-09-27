@@ -21,8 +21,29 @@ const allHighscoresGet = async (req, res) => {
     res.json(response);
 }
 
+const checkAnswerGet = async (req, res) => {
+    //compare clicked location to db
+    const y = req.params.longitude;
+    const x = req.params.latitude;
+    const imageId = Number(req.params.imageId);
+    const response = await prisma.location.findFirst({
+        where: {
+            imageId: imageId,
+            longitude: Number(y),
+            latitude: Number(x),
+        }
+    })
+    if (response) {
+        res.json(true);
+    } else {
+        res.json(false);
+    }
+
+}
+
 module.exports = {
     imageLocationsGet,
     allHighscoresGet,
+    checkAnswerGet
 
 };
