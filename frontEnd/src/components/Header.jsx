@@ -1,11 +1,14 @@
 import styles from "../styles.module.css"
+import { Link } from "react-router-dom"
 
 
 const Header = () => {
     return (
         <>
             <div className={styles.header}>
-                <h1>Where's Waldo Game</h1>
+                <div><h1>Where's Waldo Game</h1></div>
+                <div><Link to='/'>Home</Link></div>
+
             </div>
 
         </>

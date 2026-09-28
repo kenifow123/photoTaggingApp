@@ -1,18 +1,22 @@
+body {
+    text-align: center;
+}
+
 .header {
     text-align: center;
     border: black solid 1px;
 }
 
 .cardLink {
+
     border: black solid 1px;
     max-width: 400px;
-    max-height: 300px;
 
 }
 
 .cardLink img {
-    height: 100%;
-    width: 100%;
+    max-height: 300px;
+    max-width: 100%;
 }
 
 .levelDiv {
@@ -21,17 +25,16 @@
 }
 
 .dropdown {
-    display: flex;
-    flex-direction: column;
     position: absolute;
     background: white;
     border: 1px solid black;
     padding: 0;
+    text-align: left;
 }
 
- {
-    margin: 0;
-    padding: 0;
+.buttonDiv {
+    display: flex;
+    flex-direction: column;
 }
 
 .buttonDiv button {
@@ -43,3 +46,39 @@
 .buttonDiv button:hover {
     background: lightgray;
 }
+
+.overlay {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    background-color: white;
+    max-width: 500px;
+    max-height: 300px;
+}
+
+.endGamePopup {
+    background: white;
+    padding: 40px;
+}
+
+.scores {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    border: black solid 1px;
+    padding: 10px;
+}
+
+.scoreRow {
+    display: flex;
+    gap: 10px;
+
+}
+
+.imgDiv {
+    position: relative;
+    text-align: center;
+}
+

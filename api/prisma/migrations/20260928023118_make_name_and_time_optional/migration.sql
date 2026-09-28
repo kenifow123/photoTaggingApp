@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "Score" ALTER COLUMN "time" DROP NOT NULL,
+ALTER COLUMN "name" DROP NOT NULL;

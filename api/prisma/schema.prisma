@@ -32,8 +32,8 @@ model Location {
 
 model Score {
   id          Int       @id @default(autoincrement())
-  time        Float
-  name        String
+  time        Float?
+  name        String?
   startedAt   DateTime  @default(now())
   completedAt DateTime?
   imageId     Int
