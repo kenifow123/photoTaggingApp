@@ -106,7 +106,6 @@ const Level = () => {
                 const data = await response.json();
                 setEndScore(data.time);
                 setEndMenu(true);
-                navigate('/');
             }
         }
         checkEnd();
