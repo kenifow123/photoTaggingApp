@@ -8,19 +8,30 @@ body {
 }
 
 .cardLink {
-
     border: black solid 1px;
-    max-width: 400px;
+    width: 300px;
+    border-radius: 10px;
+}
 
+.homeLink {
+    text-decoration: none;
 }
 
 .cardLink img {
-    max-height: 300px;
+    height: auto;
     max-width: 100%;
+    aspect-ratio: 16/ 9;
+    object-fit: cover;
+}
+
+.cardLink a {
+    width: 100%;
 }
 
 .levelDiv {
     display: flex;
+    justify-content: center;
+    padding: 30px;
     gap: 20px;
 }
 
@@ -30,11 +41,6 @@ body {
     border: 1px solid black;
     padding: 0;
     text-align: left;
-}
-
-.buttonDiv {
-    display: flex;
-    flex-direction: column;
 }
 
 .buttonDiv button {
@@ -69,6 +75,7 @@ body {
     align-items: center;
     border: black solid 1px;
     padding: 10px;
+    border-radius: 10px;
 }
 
 .scoreRow {
@@ -80,5 +87,22 @@ body {
 .imgDiv {
     position: relative;
     text-align: center;
+    border: black solid 1px;
+}
+
+.buttonDiv {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.buttonDiv button {
+    width: 100px;
+}
+
+.thumbnail {
+    width: 30px;
+    height: 30px;
 }
 

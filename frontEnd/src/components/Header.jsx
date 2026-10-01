@@ -7,7 +7,7 @@ const Header = () => {
         <>
             <div className={styles.header}>
                 <div><h1>Where's Waldo Game</h1></div>
-                <div><Link to='/'>Home</Link></div>
+                <div><Link to='/' className={styles.homeLink}>Home</Link></div>
 
             </div>
 

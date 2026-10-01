@@ -27,6 +27,7 @@ const Level = () => {
     const [endMenu, setEndMenu] = useState(false);
     const [loading, setLoading] = useState(true);
     const [endScore, setEndScore] = useState(0);
+    const characterImages = [null, waldoThumbnail, wizardThumbnail, odlawThumbnail, wendaThumbnail];
 
 
 
@@ -161,12 +162,13 @@ const Level = () => {
                 <img src={image} alt={imageId} onClick={handleImageClick} />
                 {showMenu && (
                     <div className={styles.dropdown} style={{left: position.x, top: position.y}}>
-                        <div className={styles.buttonDiv}>
-                            {/*<img src="" alt=""/>*/}
+
                             {characters.map(character => (
-                                <button onClick={handleAnswerSubmit} key={character.id} value={character.id}>{character.name}</button>
+                                <div className={styles.buttonDiv}>
+                                    <button onClick={handleAnswerSubmit} key={character.id} value={character.id}><img className={styles.thumbnail} src={characterImages[character.id]}alt=""/>{character.name}</button>
+                                </div>
                             ))}
-                        </div>
+
                     </div>
                 )}
             </div>
